@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /home/ec2-user/app-api
+rm -rf *
+echo `date` > stop.out
+echo 'Stopped..' > stop.out

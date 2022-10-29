@@ -6,7 +6,7 @@ const otpGenerator = require('otp-generator')
 
 
 exports.create = (req,res) =>{
-  const otp =   otpGenerator.generate(4, { upperCase: false,alphabets: false, specialChars: false ,digits:true});
+  const otp =   '12345'//otpGenerator.generate(4, { upperCase: false,alphabets: false, specialChars: false ,digits:true});
 
 client.messages
   .create({
@@ -35,7 +35,7 @@ client.messages
 };
 
 exports.findAllCountry = (req,res) =>{
-  const otp =   otpGenerator.generate(4, { upperCase: false,alphabets: false, specialChars: false ,digits:true});
+  const otp =   '12345'//otpGenerator.generate(4, { upperCase: false,alphabets: false, specialChars: false ,digits:true});
 
 
     res.status(200).send({

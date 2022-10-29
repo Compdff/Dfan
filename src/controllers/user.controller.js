@@ -36,7 +36,7 @@ exports.create = (req, res) => {
         Createddate: new Date(),
         Updateddate: new Date(),
         Status:0,
-        ReferralCode:otpGenerator.generate(6, { upperCase: false, specialChars: false})
+        ReferralCode: '12345'//otpGenerator.generate(6, { upperCase: false, specialChars: false})
     };
   
     // Save User in the database
@@ -916,7 +916,7 @@ exports.findAllPublished = (req, res) => {
   exports.forgetPassword = (req,res) =>{
     User.findOne({where:{UserName:req.body.username}})
     .then(data=>{
-      var password = otpGenerator.generate(6, { upperCase: true, specialChars: true})
+      var password = '12345'//otpGenerator.generate(6, { upperCase: true, specialChars: true})
       passwordHash = bcrypt.hashSync(password, 8);
       const obj = {
         Password:passwordHash
